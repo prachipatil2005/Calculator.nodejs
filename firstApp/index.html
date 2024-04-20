@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Advanced Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My calculator</h1>
+    <h1 class="head">My Calculator</h1>
+    
     <div class="calculator">
         <input type="text" id="display" readonly>
         <div class="buttons">
@@ -28,8 +29,15 @@
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="calculate()">=</button>
             <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="toggleTheme()">Change Theme</button>
         </div>
     </div>
+
+    <div class="history">
+        <h2>Calculation History</h2>
+        <ul id="history-list"></ul>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
